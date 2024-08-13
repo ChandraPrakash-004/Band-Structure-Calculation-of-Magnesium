@@ -1,0 +1,5 @@
+&bands 
+    prefix = 'magnesium',
+    outdir = './tmp/',
+    filband = 'band.dat'
+/

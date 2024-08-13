@@ -1,0 +1,42 @@
+ &control
+    calculation = 'bands',
+    verbosity = 'high'
+    prefix = 'magnesium'
+    outdir = './tmp/'
+    pseudo_dir = '../pseudos/'
+ 
+ /
+ &system
+    ibrav =  2, 
+    celldm(1) = 6.708528, 
+    nat =  1, 
+    ntyp = 1,
+    ecutwfc = 50.0,
+    occupations = 'smearing',
+    smearing = 'marzari-vanderbilt',
+    degauss = 0.02
+    ecutrho = 450
+    nbnd = 16
+ /
+ &electrons
+ /
+ &ions
+ /
+ &cell
+ /
+!Γ—X—U|K—Γ—L—W—X 
+K_POINTS {crystel_b}
+7
+	0.0000000000	0.0000000000	0.0000000000 100
+	0.3750000000	0.3750000000	0.7500000000 100
+	0.5000000000	0.5000000000	0.5000000000 100 
+	0.6250000000	0.2500000000	0.6250000000 100 
+	0.5000000000	0.2500000000	0.7500000000 100
+	0.7500000000	0.2500000000	0.5000000000 100
+	0.5000000000	0.0000000000	0.5000000000 100
+
+ATOMIC_SPECIES
+Mg 24.305  Mg.pbe-n-kjpaw_psl.0.3.0.UPF
+
+ATOMIC_POSITIONS (alat)
+ Mg 0.0 0.0 0.0

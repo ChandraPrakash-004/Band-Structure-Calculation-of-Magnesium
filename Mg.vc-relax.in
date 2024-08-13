@@ -1,0 +1,40 @@
+ &control
+    calculation = 'vc-relax',
+    verbosity = 'high'
+    prefix = 'Mg_vc-relax'
+    outdir = './tmp/'
+    pseudo_dir = '../pseudos/'
+    tprnfor = .true.
+    tstress = .true.
+ /
+ &system
+    ibrav =  0, 
+    celldm(1) = 6.708528, 
+    nat =  1, 
+    ntyp = 1,
+    ecutwfc = 50.0,
+    occupations = 'smearing',
+    smearing = 'marzari-vanderbilt',
+    degauss = 0.02
+    ecutrho = 450
+ /
+ &electrons
+    mixing_beta = 0.7
+ /
+ &ions
+ /
+ &cell
+ /
+ATOMIC_SPECIES
+ Mg 24.305  Mg.pbe-n-kjpaw_psl.0.3.0.UPF
+
+ATOMIC_POSITIONS (alat)
+ Mg 0.0 0.0 0.0
+
+
+K_POINTS (automatic)
+  12 12 12 0 0 0
+CELL_PARAMETERS
+ 1.0 0.0 0.0
+ 0.0 1.0 0.0
+ 0.0 0.0 1.0
